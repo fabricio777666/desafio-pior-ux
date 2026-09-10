@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="logo">Sistema de Cadastro</div>
+    <div id="progressText">Etapa 1 de 5</div>
+</header>
+
+
+<main class="page">
+
+    <section class="card">
+
+        <!-- =====================================================
+             ETAPA 1
+        ====================================================== -->
+
+        <section id="step1">
+
+            <h1>Crie sua conta</h1>
+
+            <p class="subtitle">
+                Preencha os dados abaixo para iniciar seu cadastro.
+            </p>
+
+            <div class="progress">
+                <div id="progressBar"></div>
+            </div>
+
+
+            <label for="name">
+                Nome completo
+            </label>
+
+            <input
+                id="name"
+                type="text"
+                autocomplete="off"
+            >
+
+
+            <label for="email">
+                E-mail
+            </label>
+
+            <input
+                id="email"
+                type="email"
+                autocomplete="off"
+            >
+
+
+            <label for="age">
+                Idade
+            </label>
+
+            <input
+                id="age"
+                type="number"
+                autocomplete="off"
+            >
+
+
+            <div class="terms-box">
+
+                <label class="check">
+
+                    <input
+                        id="terms"
+                        type="checkbox"
+                    >
+
+                    <span>
+                        Li e aceito os termos.
+                    </span>
+
+                </label>
+
+
+                <div
+                    id="clockGame"
+                    class="clock-game hidden"
+                >
+
+                    <div class="clock-title">
+                        Confirmação de segurança
+                    </div>
+
+                    <p>
+                        Pressione iniciar e depois pare exatamente
+                        em 3 segundos.
+                    </p>
+
+                    <div id="timerDisplay">
+                        0.00
+                    </div>
+
+                    <div class="clock-buttons">
+
+                        <button
+                            id="startTimer"
+                            class="secondary"
+                        >
+                            Iniciar
+                        </button>
+
+                        <button
+                            id="stopTimer"
+                            class="secondary"
+                        >
+                            Parar
+                        </button>
+
+                    </div>
+
+                    <div
+                        id="timerStatus"
+                        class="timer-status"
+                    >
+                        Aguardando...
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="continue1"
+                class="primary"
+            >
+                Continuar
+            </button>
+
+
+            <button
+                id="secret1"
+                class="secret-button"
+                aria-label="opção adicional"
+            >
+                .
+            </button>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ETAPA 2 — SENHA PRINCIPAL
+        ====================================================== -->
+
+        <section
+            id="step2"
+            class="hidden"
+        >
+
+            <h1>
+                Defina sua senha
+            </h1>
+
+            <p class="subtitle">
+                A senha será validada uma regra por vez.
+                A ordem muda a cada cadastro.
+            </p>
+
+
+            <label for="password">
+                Senha
+            </label>
+
+            <input
+                id="password"
+                type="text"
+                autocomplete="off"
+                spellcheck="false"
+            >
+
+
+            <div class="requirement-box">
+
+                <div class="requirement-label">
+                    Regra atual
+                </div>
+
+                <div
+                    id="requirements"
+                    class="requirements"
+                ></div>
+
+                <div
+                    id="passwordStatus"
+                    class="status"
+                >
+                    Preparando regras...
+                </div>
+
+            </div>
+
+
+            <label for="confirmPassword">
+                Confirme sua senha
+            </label>
+
+            <input
+                id="confirmPassword"
+                type="text"
+                autocomplete="off"
+                spellcheck="false"
+            >
+
+
+            <button
+                id="continue2"
+                class="primary"
+            >
+                Continuar
+            </button>
+
+
+            <button
+                id="secret2"
+                class="secret-button"
+                aria-label="opção adicional"
+            >
+                .
+            </button>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ETAPA 3 — SENHA SECUNDÁRIA
+        ====================================================== -->
+
+        <section
+            id="step3"
+            class="hidden"
+        >
+
+            <h1>
+                Senha secundária
+            </h1>
+
+            <p class="subtitle">
+                Crie outra senha. As regras também
+                aparecerão uma por uma.
+            </p>
+
+
+            <div class="notice">
+
+                A senha secundária precisa ser
+                diferente da senha principal.
+
+            </div>
+
+
+            <label for="secondaryPassword">
+                Senha secundária
+            </label>
+
+            <input
+                id="secondaryPassword"
+                type="text"
+                autocomplete="off"
+                spellcheck="false"
+            >
+
+
+            <div class="requirement-box">
+
+                <div class="requirement-label">
+                    Regra atual
+                </div>
+
+                <div
+                    id="secondaryRequirements"
+                    class="requirements"
+                ></div>
+
+                <div
+                    id="secondaryStatus"
+                    class="status"
+                >
+                    Preparando regras...
+                </div>
+
+            </div>
+
+
+            <label for="confirmSecondary">
+                Confirme a senha secundária
+            </label>
+
+            <input
+                id="confirmSecondary"
+                type="text"
+                autocomplete="off"
+                spellcheck="false"
+            >
+
+
+            <button
+                id="continue3"
+                class="primary"
+            >
+                Continuar
+            </button>
+
+
+            <button
+                id="secret3"
+                class="secret-button"
+                aria-label="opção adicional"
+            >
+                .
+            </button>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ETAPA 4 — CAPTCHA
+        ====================================================== -->
+
+        <section
+            id="step4"
+            class="hidden"
+        >
+
+            <h1>
+                Verificação humana
+            </h1>
+
+            <p class="subtitle">
+                Complete as 10 verificações.
+                Cada desafio é gerado aleatoriamente.
+            </p>
+
+
+            <div class="captcha-container">
+
+                <div id="captcha1">
+
+                    <div
+                        class="captcha-title"
+                        id="captchaTitle"
+                    >
+                        Verificação 1 de 10
+                    </div>
+
+
+                    <p id="captchaInstruction"></p>
+
+
+                    <div
+                        id="captchaPuzzle"
+                        class="puzzle"
+                    ></div>
+
+
+                    <input
+                        id="captchaAnswer"
+                        type="text"
+                        autocomplete="off"
+                        spellcheck="false"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="captchaButton"
+                class="primary"
+            >
+                Validar
+            </button>
+
+
+            <button
+                id="secret4"
+                class="secret-button"
+                aria-label="opção adicional"
+            >
+                .
+            </button>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ETAPA 5 — BOTÃO FINAL
+        ====================================================== -->
+
+        <section
+            id="step5"
+            class="hidden"
+        >
+
+            <h1>
+                Última verificação
+            </h1>
+
+            <p class="subtitle">
+                O cadastro está praticamente concluído.
+            </p>
+
+
+            <div class="final-warning">
+
+                Encontre a única coisa necessária
+                para terminar.
+
+            </div>
+
+
+            <div
+                id="finishArea"
+                class="finish-area"
+            >
+
+                <button
+                    id="finish"
+                    class="moving-finish"
+                >
+                    botão
+                </button>
+
+            </div>
+
+
+            <div
+                id="finalStatus"
+                class="status"
+            >
+                Boa sorte.
+            </div>
+
+
+            <button
+                id="secret5"
+                class="secret-button"
+                aria-label="opção adicional"
+            >
+                .
+            </button>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SUCESSO
+        ====================================================== -->
+
+        <section
+            id="success"
+            class="hidden success"
+        >
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h1>
+                Cadastro concluído.
+            </h1>
+
+            <p>
+                Parabéns, você chegou ao final
+                da pior experiência de usuário.
+            </p>
+
+            <button
+                class="secondary"
+                onclick="location.reload()"
+            >
+                Fazer novamente
+            </button>
+
+        </section>
+
+    </section>
+
+</main>
+
+
+<div
+    id="toast"
+    class="toast"
+></div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

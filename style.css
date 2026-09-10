@@ -1,0 +1,866 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+
+    background: #f4f5f7;
+
+    color: #202124;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+button,
+input {
+    font: inherit;
+}
+
+
+/* =====================================================
+   TOPO
+===================================================== */
+
+.topbar {
+
+    height: 64px;
+
+    background: white;
+
+    border-bottom:
+        1px solid #ddd;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        0 35px;
+}
+
+
+.logo {
+
+    font-size: 17px;
+
+    font-weight: 600;
+}
+
+
+#progressText {
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   PÁGINA / CARD
+===================================================== */
+
+.page {
+
+    width: 100%;
+
+    max-width: 760px;
+
+    margin:
+        60px auto;
+
+    padding:
+        0 20px;
+}
+
+
+.card {
+
+    position: relative;
+
+    background: white;
+
+    border:
+        1px solid #ddd;
+
+    border-radius: 6px;
+
+    padding: 42px;
+
+    box-shadow:
+        0 3px 15px
+        rgba(0, 0, 0, .04);
+}
+
+
+h1 {
+
+    margin-top: 0;
+
+    font-size: 27px;
+
+    font-weight: 600;
+}
+
+
+.subtitle {
+
+    color: #707070;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   PROGRESSO
+===================================================== */
+
+.progress {
+
+    height: 4px;
+
+    background: #eee;
+
+    margin-bottom: 30px;
+}
+
+
+#progressBar {
+
+    height: 100%;
+
+    width: 20%;
+
+    background: #222;
+
+    transition:
+        width .3s;
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+label {
+
+    display: block;
+
+    margin-top: 19px;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+
+    width: 100%;
+
+    height: 43px;
+
+    padding:
+        0 12px;
+
+    border:
+        1px solid #bbb;
+
+    border-radius: 3px;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+
+input:focus {
+
+    border-color: #555;
+}
+
+
+/* =====================================================
+   CHECKBOX
+===================================================== */
+
+.check {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 20px;
+
+    font-size: 13px;
+}
+
+
+.check input {
+    margin: 0;
+}
+
+
+/* =====================================================
+   BOTÕES NORMAIS
+===================================================== */
+
+.primary {
+
+    display: block;
+
+    margin-left: auto;
+
+    margin-top: 30px;
+
+    height: 43px;
+
+    padding:
+        0 20px;
+
+    border:
+        1px solid #222;
+
+    border-radius: 3px;
+
+    background: #222;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+
+.primary:hover {
+    background: #000;
+}
+
+
+.secondary {
+
+    height: 43px;
+
+    padding:
+        0 18px;
+
+    border:
+        1px solid #bbb;
+
+    border-radius: 3px;
+
+    background: white;
+
+    cursor: pointer;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =====================================================
+   RELÓGIO
+===================================================== */
+
+.terms-box {
+    margin-top: 10px;
+}
+
+
+.clock-game {
+
+    margin-top: 18px;
+
+    padding: 18px;
+
+    border:
+        1px solid #ddd;
+
+    background: #fafafa;
+}
+
+
+.clock-title {
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.clock-game p {
+
+    font-size: 12px;
+
+    color: #777;
+}
+
+
+#timerDisplay {
+
+    text-align: center;
+
+    font-family:
+        monospace;
+
+    font-size: 42px;
+
+    margin:
+        20px 0;
+}
+
+
+.clock-buttons {
+
+    display: flex;
+
+    gap: 10px;
+
+    justify-content: center;
+}
+
+
+.timer-status {
+
+    text-align: center;
+
+    margin-top: 12px;
+
+    font-size: 12px;
+
+    color: #777;
+}
+
+
+/* =====================================================
+   REQUISITOS DA SENHA
+===================================================== */
+
+.requirement-box {
+
+    margin-top: 13px;
+
+    margin-bottom: 20px;
+}
+
+
+.requirement-label {
+
+    margin-bottom: 7px;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    color: #888;
+}
+
+
+.requirements {
+
+    min-height: 58px;
+
+    overflow: hidden;
+
+    transition:
+        transform .12s ease;
+}
+
+
+.requirement {
+
+    min-height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding:
+        12px 11px;
+
+    border:
+        1px solid #ddd;
+
+    border-radius: 3px;
+
+    background: #fafafa;
+
+    font-size: 13px;
+
+    color: #555;
+}
+
+
+.requirement.complete {
+
+    background: #f0f7f1;
+
+    color: #222;
+}
+
+
+.requirement .symbol {
+
+    flex:
+        0 0 20px;
+
+    text-align: center;
+
+    color: #777;
+}
+
+
+.requirement.complete .symbol {
+    color: #168743;
+}
+
+
+.status {
+
+    min-height: 16px;
+
+    margin-top: 8px;
+
+    font-size: 12px;
+
+    color: #888;
+}
+
+
+.notice,
+.final-warning {
+
+    padding: 13px;
+
+    margin-bottom: 20px;
+
+    border:
+        1px solid #ddd;
+
+    background: #fafafa;
+
+    color: #666;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   CAPTCHA
+===================================================== */
+
+.captcha-container {
+
+    padding: 20px;
+
+    border:
+        1px solid #ddd;
+
+    background: #fafafa;
+}
+
+
+.captcha-title {
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #555;
+}
+
+
+#captchaInstruction {
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    color: #666;
+}
+
+
+.puzzle {
+
+    margin:
+        18px 0;
+
+    padding: 20px;
+
+    min-height: 90px;
+
+    border:
+        1px solid #ccc;
+
+    background: white;
+
+    font-family:
+        monospace;
+
+    line-height: 2;
+
+    letter-spacing: 3px;
+
+    text-align: center;
+
+    user-select: none;
+}
+
+
+.puzzle-row {
+
+    padding:
+        5px 0;
+
+    border-bottom:
+        1px solid #eee;
+
+    text-align: left;
+
+    letter-spacing: 2px;
+}
+
+
+.puzzle-row:last-child {
+    border-bottom: none;
+}
+
+
+.captcha-large {
+
+    padding:
+        10px 0;
+
+    font-size: 25px;
+
+    letter-spacing: 8px;
+}
+
+
+.captcha-no-break {
+
+    font-size: 18px;
+
+    line-height: 2.5;
+
+    word-break: break-all;
+}
+
+
+.matrix-header,
+.matrix-row {
+
+    display: grid;
+
+    grid-template-columns:
+        35px repeat(8, 1fr);
+
+    gap: 4px;
+
+    align-items: center;
+
+    margin-bottom: 5px;
+}
+
+
+.matrix-header span,
+.matrix-row span,
+.matrix-row b {
+
+    padding: 5px;
+
+    text-align: center;
+}
+
+
+.matrix-row span {
+
+    border:
+        1px solid #eee;
+
+    background: #fafafa;
+}
+
+
+.math-puzzle,
+.logic-puzzle,
+.mirror-puzzle,
+.mixed-puzzle {
+
+    padding: 18px;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    letter-spacing: 2px;
+}
+
+
+.order-item {
+
+    display: inline-block;
+
+    padding:
+        7px 9px;
+
+    margin: 5px;
+
+    border:
+        1px dashed #ccc;
+
+    background: #fff;
+
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   BOTÃO FINAL — PEQUENO E RÁPIDO
+===================================================== */
+
+.finish-area {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 320px;
+
+    overflow: hidden;
+
+    border:
+        1px solid #d5d5d5;
+
+    background: #fafafa;
+}
+
+
+.moving-finish {
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 34px;
+
+    height: 15px;
+
+    min-width: 0;
+
+    padding: 0;
+
+    margin: 0;
+
+    border:
+        1px solid #aaa;
+
+    border-radius: 2px;
+
+    background: white;
+
+    color: #222;
+
+    font-size: 8px;
+
+    line-height: 13px;
+
+    text-transform: lowercase;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    will-change:
+        transform;
+}
+
+
+.moving-finish:hover {
+    background: #f3f3f3;
+}
+
+
+/* =====================================================
+   BOTÕES SECRETOS
+===================================================== */
+
+.secret-button {
+
+    position: absolute;
+
+    right: 8px;
+
+    bottom: 8px;
+
+    width: 9px;
+
+    height: 9px;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #fdfdfd;
+
+    opacity: .08;
+
+    cursor: default;
+
+    font-size: 8px;
+
+    line-height: 9px;
+}
+
+
+.secret-button:hover {
+
+    opacity: .28;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   SUCESSO
+===================================================== */
+
+.success {
+
+    text-align: center;
+}
+
+
+.success-icon {
+
+    width: 56px;
+
+    height: 56px;
+
+    margin:
+        0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #168743;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 29px;
+}
+
+
+/* =====================================================
+   TOAST
+===================================================== */
+
+.toast {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    max-width: 350px;
+
+    padding:
+        13px 17px;
+
+    background: #222;
+
+    color: white;
+
+    border-radius: 4px;
+
+    font-size: 13px;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        opacity .2s;
+}
+
+
+.toast.show {
+    opacity: 1;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .topbar {
+        padding: 0 18px;
+    }
+
+    .page {
+        margin-top: 30px;
+    }
+
+    .card {
+        padding:
+            25px 20px;
+    }
+
+    .finish-area {
+        height: 250px;
+    }
+
+    .matrix-header,
+    .matrix-row {
+
+        grid-template-columns:
+            25px
+            repeat(
+                8,
+                minmax(
+                    20px,
+                    1fr
+                )
+            );
+
+        gap: 2px;
+
+        font-size: 11px;
+    }
+}
